@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+.title {
+  height: 310px;
+  background-image: url(../images/shopping/bg-main.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title h1 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+  text-shadow: 1px 1px 10px #665048;
+}
+
+.title p {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+  text-shadow: 1px 1px 10px #665048;
+}
+
+article {
+  display: block ;
+  text-align: center;
+  background-color: #dfeaa6;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  width: 80%;
+  padding: 30px;
+  line-height: 2;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.item-list {
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,240px);
+  column-gap: 95px;
+  row-gap: 70px;
+  justify-content: center;
+}
+
+.item-list dl {
+  margin-top: 20px;
+}
+
+.item-list dt {
+  font-weight: bold;
+}
+
+.item-list dd {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.item-list li {
+  position: relative;
+}
+
+@media (max-width:800px) {
+  .item-list {
+    margin-top: 45px;
+    row-gap: 40px;
+  }
+
+}

@@ -1,0 +1,175 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="NatureBoxでは地元産の新鮮でおいしい有機野菜や果物を取り揃えております。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/common/title.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Kosugi&family=M+PLUS+1p:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="loading">
+        <p>Loading...</p>
+        <div id="loading-screen"></div>
+    </div>
+    <header class="header">
+        <div class="header-inner">
+            <a href="./index.html" class="header-logo">
+                <img src="./images/common/logo-header.png" alt="Nature Box" class="header-logo-img">
+            </a>
+            <button class="toggle-menu-button"></button>
+            <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                        <li><a href="about.html">わたしたちについて</a></li>
+                        <li><a href="shopping.html">お取り扱い商品について</a></li>
+                        <li><a href="contact.html">コンタクト</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="first-view">
+            <div class="first-view-text">
+                <h1 id="heading">体においしい、自然においしい。</h1>
+                <p id="heading">地元産の有機野菜や果物などを豊富に取り揃えております。</p>
+            </div>
+        </div>
+        <div class="lead">
+            <p>農家の方々から届けられた、新鮮なオーガニックの野菜、果物などをお届けしています。</p>
+            <div class="link-button-area">
+                <a href="./about.html" class="link-button">わたしたちについて</a>
+            </div>
+        </div>
+        <div class="recommended">
+            <h2>おすすめ</h2>
+            <p>当店の自慢は新鮮な地域の旬のお野菜。<br>季節によって取り扱うものは変わりますが、<br>通年ご用意している人気商品をご紹介します。</p>
+            <ul class="item-list">
+                <li>
+                    <img src="./images/index/item01.jpg" alt="はちみつ">
+                    <dl>
+                        <dt>有機はちみつ</dt>
+                        <dd>非加熱で仕上げた蜂の巣が少し入ったままの濃厚な味わいのはちみつ。ミネラルたっぷりのパワーフードです。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="./images/index/item02.jpg" alt="そば粉">
+                    <dl>
+                        <dt>無農薬蕎麦粉</dt>
+                        <dd>外皮を少し挽き込んだ香りの良い蕎麦粉。粒子が細かいので蕎麦打ちはもちろんガレットなどのお菓子作りにも最適です。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="./images/index/item03.jpg" alt="大豆">
+                    <dl>
+                        <dt>有機大豆</dt>
+                        <dd>ふくよかな甘みが美味しい大豆。味噌や納豆にすると格別な味わいです。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="./images/index/item04.jpg" alt="キムチ">
+                    <dl>
+                        <dt>自家製キムチ</dt>
+                        <dd>規格外で流通しなかったけ美味しいお野菜を特製レシピで漬け込みました。りんご入りのまろやかな味わいです。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="./images/index/item05.jpg" alt="そば粉">
+                    <dl>
+                        <dt>自家製ピーナッツバター</dt>
+                        <dd>有機ピーナッツと体に優しいきび砂糖で作った特別な一品。少し粒を残したクランチ入り。</dd>
+                    </dl>
+                </li>
+
+            </ul>
+            <div class="link-button-area">
+                <a href="./shopping.html" class="link-button">商品案内</a>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="site-menu">
+            <ul>
+                <li><a href="about.html">わたしたちについて</a></li>
+                <li><a href="shopping.html">お取り扱い商品について</a></li>
+                <li><a href="contact.html">コンタクト</a></li>
+        </nav>
+        <a href="./index.html" class="footer-logo">
+            <img src="./images/common/FooterNatureBoxLogo.png" alt="Nature Box">
+        </a>
+        <p class="footer-tel">TEL:01-2345-6789</p>
+        <p class="footer-time">OPEN: Fri-Sun 11:00-16:00</p>
+        <p class="copyright"><small>&copy;Nature Box</small></p>
+    </footer>
+    
+    <script>
+        /*ローディング画面
+        ==============================================*/
+
+        const loadingAreaGrey = document.querySelector('#loading');
+        const loadingAreaGreen = document.querySelector('#loading-screen');
+        const loadingText = document.querySelector('#loading p');
+
+        window.addEventListener('load', () => {
+
+            //ローディング中(グレースクリーン)
+            loadingAreaGrey.animate(
+                {
+                    opacity: [1, 0],
+                    visibility: 'hidden',
+                },
+                {
+                    duration: 2000,
+                    delay: 1200,
+                    easing: 'ease',
+                    fill: 'forwards',
+                }
+            );
+
+            //ローディング中(グリーンスクリーン)
+            loadingAreaGreen.animate(
+                {
+                    translate: ['0 100vh', '0 0', '0 -100vh']
+                },
+                {
+                    duration: 2000,
+                    delay: 800,
+                    easing: 'ease',
+                    fill: 'forwards',
+                }
+            );
+
+            //ローディング中テキスト
+            loadingText.animate(
+                [
+                    {
+                        opacity: 1,
+                        offset: .8
+                    },
+                    {
+                        opacity: 0,
+                        offset: 1
+                    },
+                ],
+                {
+                    duration: 1200,
+                    easing: 'ease',
+                    fill: 'forwards',
+                }
+            );
+        });
+
+
+    </script>
+</body>
+
+</html>

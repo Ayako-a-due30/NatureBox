@@ -1,0 +1,125 @@
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Kosugi&family=M+PLUS+1p:wght@100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="icon" href="images/common/title.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <title>CONTACT | Nature Boxのアクセスマップとお問い合わせについて</title>
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="./index.html" class="header-logo">
+        <img src="./images/common/logo-header.png" alt="Nature Box" class="header-logo-img">
+      </a>
+      <button class="toggle-menu-button"></button>
+      <div class="header-site-menu">
+        <nav class="site-menu">
+          <ul>
+            <li><a href="about.html">わたしたちについて</a></li>
+            <li><a href="shopping.html">お取り扱い商品について</a></li>
+            <li><a href="contact.html">コンタクト</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="title">
+      <h1>コンタクト</h1>
+      <p>アクセス・お問い合わせ</p>
+    </div>
+    <div class="map">
+      <h2>アクセスマップ</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.0751007773456!2d133.25699941525193!3d35.428169580254085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3556f95125d032d3%3A0xf623201828908244!2sYasugi%20Station!5e0!3m2!1sen!2sjp!4v1682319456291!5m2!1sen!2sjp"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="contact">
+      <h2>お問い合わせフォーム</h2>
+      <form action="#">
+        <dl class="form-area">
+          <dt><span class="required">お名前</span></dt>
+          <dd><input type="text" class="input-text" name="name" required></dd>
+          <dt><span class="required">メールアドレス</span></dt>
+          <dd><input type="email" class="input-text" name="email"></dd>
+          <dt><span>お電話番号</span></dt>
+          <dd><input type="tel" class="input-text" name="tel"></dd>
+          <dt>お問い合わせ種別</dt>
+          <dd>
+            <select name="" id="" class="select-box">
+              <option value="" selected>営業時間について</option>
+              <option value="">店舗について</option>
+              <option value="">取扱商品について</option>
+              <option value="">その他</option>
+            </select>
+          </dd>
+          <dt>お客様について</dt>
+          <dd>
+            <label for="" class="radio-button"><input type="radio" name="user-type" value="一般のお客様" checked>
+              一般のお客様</label>
+            <label for="" class="radio-button"><input type="radio" name="user-type" value="お取引様"> お取引様</label>
+            <label for="" class="radio-button"><input type="radio" name="user-type" value="その他"> その他</label>
+          </dd>
+          <dt><span class="required">お問い合わせ内容<br>（１００字以内）</span></dt>
+          <dd><textarea name="message" class="message" id="message" required>
+</textarea>
+            <div class="length-counter">
+              <span id="counter">0</span>文字
+            </div>
+          </dd>
+        </dl>
+        <p class="confirm-text">ご入力内容をご確認の上、お間違いがなければ送信ボタンを押してください。</p>
+        <div class="submit-button-area">
+          <button class="submit-button" type="submit">送信</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <nav class="site-menu">
+      <ul>
+        <li><a href="about.html">わたしたちについて</a></li>
+        <li><a href="shopping.html">お取り扱い商品について</a></li>
+        <li><a href="contact.html">コンタクト</a></li>
+      </ul>
+    </nav>
+    <a href="./index.html" class="footer-logo">
+      <img src="./images/common/FooterNatureBoxLogo.png" alt="Nature Box">
+    </a>
+    <p class="footer-tel">TEL:01-2345-6789</p>
+    <p class="footer-time">OPEN: Fri-Sun 11:00-16:00</p>
+    <p class="copyright"><small>&copy;Nature Box</small></p>
+  </footer>
+
+  <script>
+    /*お問い合わせページJS
+    ==============================================*/
+
+    //文字数カウント
+    const counter = document.querySelector('#counter');
+    const message = document.querySelector('#message');
+
+    message.addEventListener('keyup', () => {
+      const messageLength = message.value.length;
+      counter.innerText = messageLength;
+
+      if (messageLength > 100) {
+        counter.classList.add("over100");
+      }
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+/* CVS */
+
+96b23c,f2cedd,dfeaa6,628d3d,665048
+
+/* CVS with # */
+
+#96b23c,#f2cedd,#dfeaa6,#628d3d,#665048
+
+/* Array */
+
+["96b23c", "f2cedd", "dfeaa6", "628d3d", "665048"]
+
+/* Array with # */
+
+["#96b23c", "#f2cedd", "#dfeaa6", "#628d3d", "#665048"]
